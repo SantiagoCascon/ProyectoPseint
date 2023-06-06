@@ -71,3 +71,20 @@ def listarRegistros():
         print(f"Ocurrio un error: {e}")
     finally:
         print("Listado de registros exitoso.\n")
+
+ #  FUNCION PARA BUSCAR UN REGISTRO POR SU DNI
+def buscarEmpleado():
+    print("\n-----------------MENU: Buscar personal.-----------------")
+    try:
+        with conexion:
+            with conexion.cursor() as cursor:
+                # Placheholder
+                sentencia = 'SELECT * FROM empleados_bd WHERE dni = %s'
+                dni = input("Ingrese el DNI (sin putos ni espacios): ")
+                cursor.execute(sentencia, (dni,))  # Ejecutamos sentencia
+                registros = cursor.fetchone()
+                print(f"Registro encontrado con excito.\n {registros}")
+    except Exception as e:
+        print(f"Ocurrio un error: {e}")
+    finally:
+        print(" ")
