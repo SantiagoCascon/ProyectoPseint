@@ -33,3 +33,23 @@ def menu():
             horarioLaboral()
         elif opcion == 6:
             salir()
+            
+ # Creamos las funciones para cada una de las opciones de nuestro menú
+def registrar():
+    print("\n-----------------MENU: Registro de personal.-----------------")
+    try:
+        with conexion:
+            with conexion.cursor() as cursor:
+                # Placheholder
+                sentencia = 'INSERT INTO empleados_bd (nombre, apellido, dni)VALUES (%s, %s, %s)'
+                nombre = input("----Ingrese el NOMBRE: ")
+                apellido = input("----Ingrese el APELLIDO: ")
+                dni = int(input("----Ingrese el DNI (sin putos ni espacios): "))
+                # Ejecutamos sentencia
+                cursor.execute(sentencia, (nombre, apellido, dni))
+                registros_insertados = cursor.rowcount
+                print(f"Los registros insertados son: {registros_insertados}")
+    except Exception as e:
+        print(f"Ocurrio un error: {e}")
+    finally:
+        print("Registro ingresado con excito.")
