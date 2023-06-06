@@ -107,3 +107,9 @@ def horarioLaboral():
     print(f"LUNES  --  MARTES -- MIERCOLES -- JUEVES -- VIERNES -- SABADO")
     print(f"{ingreso}  --  {ingreso}  --   {ingreso}   --  {ingreso} --  {ingreso}  --  {ingreso} ")
     print(f"{salida}  --  {salida}  --   {salida}   --  {salida} --  {salida}  --  {salida} \n")
+    
+# FUNCION PARA FINALIZAR PROGRAMA Y CERRAR LA CONEXION CON LA BASE DE DATOS
+def salir():
+    print("Hasta pronto")
+    conexion.close()
+    print(conexion)
