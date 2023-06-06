@@ -113,3 +113,6 @@ def salir():
     print("Hasta pronto")
     conexion.close()
     print(conexion)
+    
+# POR ULTIMO LLAMAMOS A LA FUNCION DE MENU PARA DARLE VIDA A NUESTRO PROGRAMA
+menu()
