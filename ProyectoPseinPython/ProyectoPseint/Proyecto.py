@@ -33,8 +33,9 @@ def menu():
             horarioLaboral()
         elif opcion == 6:
             salir()
-            
+               
  # Creamos las funciones para cada una de las opciones de nuestro menú
+# FUNCION PARA REGISTRAR PERSONAL
 def registrar():
     print("\n-----------------MENU: Registro de personal.-----------------")
     try:
@@ -53,3 +54,20 @@ def registrar():
         print(f"Ocurrio un error: {e}")
     finally:
         print("Registro ingresado con excito.")
+
+# FUNCION PARA LISTAR REGISTROS 
+def listarRegistros():
+    print("\n-----------------MENU: Mostrar registros.-----------------")
+    try:
+        with conexion:
+            with conexion.cursor() as cursor:
+                # Placheholder
+                sentencia = 'SELECT * FROM empleados_bd'
+                cursor.execute(sentencia)  # Ejecutamos sentencia
+                registros = cursor.fetchall()
+                for registro in registros:
+                    print(registros)
+    except Exception as e:
+        print(f"Ocurrio un error: {e}")
+    finally:
+        print("Listado de registros exitoso.\n")
