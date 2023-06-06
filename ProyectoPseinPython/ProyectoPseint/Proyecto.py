@@ -97,3 +97,13 @@ def calculoVacaciones():
         print("\nLe corresponden 15 días de vacaciones.")
     else:
         print("\nLe corresponden 7 días de vacaciones.")
+
+ # FUNCION PARA CRONOGRAMA DE HORARIOS 
+def horarioLaboral():
+    print("\n-----------------MENU: Horario Laboral.-----------------")
+    ingreso = input("Horario de Ingreso (digitar hh:mm): ")
+    salida = input("Horario de Salida (Digitar hh:mm): ")
+    print("\n----------- CRONOGRAMA DE HORARIOS -----------")
+    print(f"LUNES  --  MARTES -- MIERCOLES -- JUEVES -- VIERNES -- SABADO")
+    print(f"{ingreso}  --  {ingreso}  --   {ingreso}   --  {ingreso} --  {ingreso}  --  {ingreso} ")
+    print(f"{salida}  --  {salida}  --   {salida}   --  {salida} --  {salida}  --  {salida} \n")
