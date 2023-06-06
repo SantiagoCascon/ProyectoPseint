@@ -88,3 +88,12 @@ def buscarEmpleado():
         print(f"Ocurrio un error: {e}")
     finally:
         print(" ")
+
+ # FUNCION PARA CALCULAR VACACIONES
+def calculoVacaciones():
+    print("\n-----------------MENU: Calcular vacaciones.-----------------")
+    diasT = int(input("Ingrese la cantidad de días trabajados: "))
+    if diasT >= 180:
+        print("\nLe corresponden 15 días de vacaciones.")
+    else:
+        print("\nLe corresponden 7 días de vacaciones.")
