@@ -1,14 +1,15 @@
 # ProyectoPseint
 Proyecto inicial en Pseint pasado a Python 
 
-PSEUDOCODIGO
-Algoritmo RegistroPersonas
-	
-definir limite, i,j,k, entrada, ingresados, p Como Entero;
-Definir  bandera, bandera2 Como Logico;
+PSEUDOCODIGO:
 
-limite=20;
-i=0;
+	Algoritmo RegistroPersonas
+	
+	definir limite, i,j,k, entrada, ingresados, p Como Entero;
+	Definir  bandera, bandera2 Como Logico;
+
+	limite=20;
+	i=0;
 	bandera=Falso;
 	bandera2=falso;
 	entrada=0;
